@@ -1,6 +1,6 @@
 <div class="face-snap-card">
   <h2> {{faceSnap.title}}</h2>
-  <p>{{faceSnap.createdDate}}</p>
+  <p>Mise en ligne le : <br>{{faceSnap.createdDate}}</p>
 
   <!--attribut binding-->
   <!--  <img src="{{imageUrl}}" alt="{{title}}">-->
@@ -10,8 +10,6 @@
 
   <p>
     <button (click)="onSnap()"> {{buttonText}}</button>
-    {{faceSnap.snaps}}
-  </p>
-
-
+    <span [ngStyle]="{ color: 'rgb(0, ' + faceSnap.snaps + ', 0)' }">🤌 {{ faceSnap.snaps }}</span>  </p>
+  
 </div>
