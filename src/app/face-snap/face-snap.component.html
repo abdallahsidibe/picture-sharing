@@ -1,15 +1,16 @@
 <div class="face-snap-card">
-  <h2> {{title}}</h2>
-  <p>{{createdDate}}</p>
+  <h2> {{faceSnap.title}}</h2>
+  <p>{{faceSnap.createdDate}}</p>
 
   <!--attribut binding-->
-<!--  <img src="{{imageUrl}}" alt="{{title}}">-->
-  <img [src]="imageUrl" [alt]="title">
-  <p>{{description}}</p>
+  <!--  <img src="{{imageUrl}}" alt="{{title}}">-->
+  <img [src]="faceSnap.imageUrl" [alt]="title">
+  <p>{{faceSnap.description}}</p>
+  <p *ngIf="faceSnap.location==='Paris' ">Photo prise à: {{faceSnap.location}}</p>
 
   <p>
     <button (click)="onSnap()"> {{buttonText}}</button>
-    {{snaps}}
+    {{faceSnap.snaps}}
   </p>
 
 

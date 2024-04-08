@@ -1,11 +1,15 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {FaceSnap} from "../model/face-snap.model";
+import {NgIf} from "@angular/common";
 
 @Component({
   selector: 'app-face-snap',
   standalone: true,
-  imports: [],
+
   templateUrl: './face-snap.component.html',
+  imports: [
+    NgIf
+  ],
   styleUrl: './face-snap.component.scss'
 })
 export class FaceSnapComponent implements OnInit {
@@ -17,15 +21,6 @@ export class FaceSnapComponent implements OnInit {
   snaps!: number;
   imageUrl!: string;
   buttonText!: string;
-
-  constructor(title: string, description: string, createdDate: Date, snaps: number, imageUrl: string, buttonText: string) {
-    this.title = title;
-    this.description = description;
-    this.snaps = snaps;
-    this.buttonText = buttonText;
-    this.createdDate = createdDate;
-    this.imageUrl = imageUrl
-  }
 
   ngOnInit(): void {
     this.title = 'Agent';
@@ -51,4 +46,5 @@ export class FaceSnapComponent implements OnInit {
       this.buttonText = 'Oh Snap!';
     }
   }
+
 }
