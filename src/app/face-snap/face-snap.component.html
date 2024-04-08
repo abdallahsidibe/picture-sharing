@@ -1,4 +1,16 @@
-<h2> {{title}}</h2>
-<p>{{description}}</p>
-<p>{{createdDate}}</p>
-<p>{{snaps}}</p>
+<div class="face-snap-card">
+  <h2> {{title}}</h2>
+  <p>{{createdDate}}</p>
+
+  <!--attribut binding-->
+<!--  <img src="{{imageUrl}}" alt="{{title}}">-->
+  <img [src]="imageUrl" [alt]="title">
+  <p>{{description}}</p>
+
+  <p>
+    <button (click)="onSnap()"> {{buttonText}}</button>
+    {{snaps}}
+  </p>
+
+
+</div>
