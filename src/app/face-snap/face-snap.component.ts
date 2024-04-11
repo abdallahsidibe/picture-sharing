@@ -19,6 +19,7 @@ export class FaceSnapComponent implements OnInit {
   @Input() faceSnap!:FaceSnap;
 
   title!: string;
+
   description!: string;
   createdDate!: Date;
   snaps!: number;
